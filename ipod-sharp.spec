@@ -1,6 +1,6 @@
 %define name ipod-sharp
 %define version 0.6.3
-%define release %mkrel 1
+%define release %mkrel 2
 %define ipoddevice 0.5.3
 %if %mdkversion >= 200600
 %define pkgconfigdir %_datadir/pkgconfig
@@ -54,7 +54,7 @@ make
 %install
 rm -rf $RPM_BUILD_ROOT
 %makeinstall_std pkgconfigdir=%pkgconfigdir docdir=%monoprefix/monodoc/sources/
-
+install -m 644 src/ipod-sharp.dll.config %buildroot%monoprefix/ipod-sharp/
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -68,7 +68,11 @@ fi
 %files
 %defattr(-,root,root)
 %doc README AUTHORS NEWS
-%monoprefix/ipod-sharp/
+%dir %monoprefix/ipod-sharp/
+%monoprefix/ipod-sharp/ipod-sharp.dll
+%monoprefix/ipod-sharp/ipod-sharp.dll.config
+%monoprefix/ipod-sharp/ipod-sharp-ui.dll
+%monoprefix/ipod-sharp/ipod-sharp-firmware.dll
 %pkgconfigdir/*
 
 %files doc
