@@ -24,6 +24,7 @@ BuildRequires: gtk-sharp2
 BuildRequires: libipoddevice-devel >= %ipoddevice
 BuildArch: noarch
 Requires: libipoddevice >= %ipoddevice
+%define _requires_exceptions ^lib.*
 
 %description
 ipod-sharp is a library that allows manipulation of the iTunesDB used
