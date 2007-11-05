@@ -1,6 +1,6 @@
 %define name ipod-sharp
-%define version 0.6.3
-%define release %mkrel 2
+%define version 0.6.4
+%define release %mkrel 1
 %define ipoddevice 0.5.3
 %if %mdkversion >= 200600
 %define pkgconfigdir %_datadir/pkgconfig
@@ -12,7 +12,8 @@ Summary: Library to control the Ipod database
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: http://banshee-project.org/files/ipod-sharp/%{name}-%{version}.tar.bz2
+Source0: http://www.snorp.net/files/ipod-sharp/%name-%version.tar.gz
+#Source0: http://banshee-project.org/files/ipod-sharp/%{name}-%{version}.tar.bz2
 #Source0: http://banshee-project.org/files/ipod-sharp/%{name}-%{svn}.tar.bz2
 License: LGPL
 Group: System/Libraries
