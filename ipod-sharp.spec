@@ -1,7 +1,6 @@
 %define name ipod-sharp
-%define version 0.6.4
+%define version 0.8.0
 %define release %mkrel 1
-%define ipoddevice 0.5.3
 %if %mdkversion >= 200600
 %define pkgconfigdir %_datadir/pkgconfig
 %else
@@ -21,10 +20,10 @@ Url: http://banshee-project.org/index.php/Ipod-sharp
 BuildRequires: mono-devel
 BuildRequires: mono-tools
 BuildRequires: gtk-sharp2
-BuildRequires: libipoddevice-devel >= %ipoddevice
+BuildRequires: ndesk-dbus-glib
+BuildRequires: podsleuth
 BuildArch: noarch
-Requires: libipoddevice >= %ipoddevice
-%define _requires_exceptions ^lib.*
+Requires: podsleuth
 
 %description
 ipod-sharp is a library that allows manipulation of the iTunesDB used
@@ -55,7 +54,6 @@ make
 %install
 rm -rf $RPM_BUILD_ROOT
 %makeinstall_std pkgconfigdir=%pkgconfigdir docdir=%monoprefix/monodoc/sources/
-install -m 644 src/ipod-sharp.dll.config %buildroot%monoprefix/ipod-sharp/
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -70,8 +68,8 @@ fi
 %defattr(-,root,root)
 %doc README AUTHORS NEWS
 %dir %monoprefix/ipod-sharp/
+%monoprefix/ipod-sharp/*.mdb
 %monoprefix/ipod-sharp/ipod-sharp.dll
-%monoprefix/ipod-sharp/ipod-sharp.dll.config
 %monoprefix/ipod-sharp/ipod-sharp-ui.dll
 %monoprefix/ipod-sharp/ipod-sharp-firmware.dll
 %pkgconfigdir/*
