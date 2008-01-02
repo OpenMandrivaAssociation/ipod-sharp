@@ -17,6 +17,7 @@ Source0: http://www.snorp.net/files/ipod-sharp/%name-%version.tar.gz
 License: LGPL
 Group: System/Libraries
 Url: http://banshee-project.org/index.php/Ipod-sharp
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: mono-devel
 BuildRequires: mono-tools
 BuildRequires: gtk-sharp2
