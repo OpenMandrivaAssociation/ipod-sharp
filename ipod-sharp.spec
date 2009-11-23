@@ -1,5 +1,5 @@
 %define name ipod-sharp
-%define version 0.8.3
+%define version 0.8.5
 %define release %mkrel 1
 %if %mdkversion >= 200600
 %define pkgconfigdir %_datadir/pkgconfig
