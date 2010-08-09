@@ -1,6 +1,6 @@
 %define name ipod-sharp
 %define version 0.8.5
-%define release %mkrel 1
+%define release %mkrel 2
 %if %mdkversion >= 200600
 %define pkgconfigdir %_datadir/pkgconfig
 %else
@@ -28,6 +28,17 @@ Requires: podsleuth
 ipod-sharp is a library that allows manipulation of the iTunesDB used
 in Apple iPod devices.  Currently it supports adding/removing songs
 and manipulating playlists.
+
+%package devel
+Summary: Development files for %name
+Group: Development/Other
+Requires: %name = %version-%release
+
+%description devel
+ipod-sharp is a library that allows manipulation of the iTunesDB used
+in Apple iPod devices.  Currently it supports adding/removing songs
+and manipulating playlists.
+
 
 %package doc
 Summary: Development documentation for %name
@@ -71,6 +82,9 @@ fi
 %monoprefix/ipod-sharp/ipod-sharp.dll
 %monoprefix/ipod-sharp/ipod-sharp-ui.dll
 %monoprefix/ipod-sharp/ipod-sharp-firmware.dll
+
+%files devel
+%defattr(-,root,root)
 %pkgconfigdir/*
 
 %files doc
