@@ -20,7 +20,7 @@ BuildRequires: mono-devel
 BuildRequires: mono-tools
 BuildRequires: gtk-sharp2
 BuildRequires: ndesk-dbus-glib
-BuildRequires: podsleuth
+BuildRequires: podsleuth-devel
 BuildArch: noarch
 Requires: podsleuth
 
