@@ -18,8 +18,8 @@ Url: http://banshee-project.org/index.php/Ipod-sharp
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: mono-devel
 BuildRequires: mono-tools
-BuildRequires: gtk-sharp2
-BuildRequires: ndesk-dbus-glib
+BuildRequires: gtk-sharp2-devel
+BuildRequires: ndesk-dbus-glib-devel
 BuildRequires: podsleuth-devel
 BuildArch: noarch
 Requires: podsleuth
