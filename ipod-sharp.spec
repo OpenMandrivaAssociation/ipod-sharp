@@ -14,7 +14,7 @@ Release: %{release}
 Source0: http://download.banshee-project.org/%name/%version/%{name}-%{version}.tar.bz2
 License: LGPL
 Group: System/Libraries
-Url: http://banshee-project.org/index.php/Ipod-sharp
+Url: https://banshee-project.org/index.php/Ipod-sharp
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: mono-devel
 BuildRequires: mono-tools
